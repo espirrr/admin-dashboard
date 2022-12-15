@@ -1,8 +1,18 @@
+html, body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 1fr 2fr 2fr;
-    text-align: center;
+    grid-template-rows: 0.5fr 0.5fr 2fr 2fr;
+
+    /* text-align: center; */
+
+    height: 100%
+ 
 }
 
 div {
@@ -37,6 +47,7 @@ div {
     grid-template-columns: 1fr 1fr 2fr;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 
 li {
@@ -47,4 +58,252 @@ li {
 ul {
     margin: 0px;
     padding: 0px;
+}
+
+.secondHeader {
+    grid-column: 2 / 3;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.mainGreetingContainer {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+
+}
+
+.bigProfilePic {
+    justify-self: end;
+}
+
+.greetingName {
+    justify-self: start;
+
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    align-items: center;
+    justify-items: start;
+}
+
+.actionItems {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-right: 50px;
+    
+}
+.actionItems ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    gap: 35px;
+}
+
+.dashboard {
+    grid-column: 1 / 2;
+    grid-row: 1 / 5;
+    display: grid;
+
+    grid-template-rows: 1fr 2fr 3fr;
+}
+
+.firstDashboardBox, .secondDashboardBox, .thirdDashboardBox {
+    gap: 20px;
+}
+
+.firstDashboardBox {
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.secondDashboardBox {
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-content: start;
+}
+
+.thirdDashboardBox {
+    grid-row: 3 / 4;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-content: start;
+}
+
+.dashboardIcon, .dashboardLogo, .trendingIcon {
+    justify-self: end;
+    align-self: center;
+}
+
+.dashboardText, .dashboardTitle, .trendingPerson {
+    justify-self: start;
+    align-self: center;
+}
+
+.mainContent {
+
+    grid-column: 2 / 3;
+    grid-row: 3 / 5;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.projects {
+    grid-row: 1 / 4;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.25fr 1fr 1fr 1fr;
+}
+
+.projectsHeader {
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+    align-self: end;
+    justify-self: start;
+    padding: 0px 0px 10px 10px;
+}
+
+.actualProject {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+
+    grid-template-areas:
+    "projectTitle projectTitle projectTitle"
+    "projectDescription projectDescription projectDescription"
+    "projectIcons projectIcons projectIcons"
+
+
+}
+
+.projectTitle {
+    grid-area: projectTitle;
+}
+
+.projectDescription {
+    grid-area: projectDescription;
+    align-self: start;
+    justify-self: start;
+
+    /* Lets the description text wrap within the container without overflowing */
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    word-break: break-word;
+  
+}
+
+.projectIcons {
+    grid-area: projectIcons;
+
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+.starIcon {
+    grid-column: 8 / 9;
+}
+
+.eyeIcon {
+    grid-column: 9 / 10;
+}
+
+.linkIcon {
+    grid-column: 10 / 11;
+}
+
+
+.rightContent {
+    grid-row: 1 / 4;
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+  
+}
+
+.announcements {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    grid-template-columns: 1fr;
+  
+
+}
+
+
+.announcementsHeader {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    align-self: end;
+    justify-self: start;
+ 
+}
+
+.announcementsContent {
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+ 
+}
+
+.actualAnnouncementOne {
+    grid-row: 1 / 2;
+
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+.actualAnnouncementTwo {
+    grid-row: 2 / 3;
+
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+.actualAnnouncementThree {
+    grid-row: 3 / 4;
+
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+.announcementTitle {
+    grid-row: 1 / 2;
+} 
+
+.announcementDescription {
+
+    grid-row: 2 / 3;
+    
+    /* Tried to figure out how to prevent the overflow of the description from expanding the div and to cut it off with text-overflow: ellipsis. */
+    /* overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    width: 100%;
+    max-height: 100%; */
+    
+}
+.trending {
+    grid-row: 2 / 3;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 4fr;
+    
+}
+
+.trendingHeader {
+    grid-column: 1 / 3;
+
+    align-self: end;
+    justify-self: start;
 }
